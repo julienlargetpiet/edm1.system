@@ -2,7 +2,7 @@
 
 # Install
 
--> git clone https://github.com/julienlargetpiet/edm1
+-> git clone https://github.com/julienlargetpiet/edm1.system
 
 -> cd edm1
 
