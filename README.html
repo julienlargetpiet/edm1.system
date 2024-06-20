@@ -1,0 +1,341 @@
+
+<!DOCTYPE html><html><head><title>R: fold_rec2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>fold_rec2</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>fold_rec2</h2>
+
+<h3>Description</h3>
+
+<p>Allow to find the directories and the subdirectories with a specified end and start depth value from a path. This function might be more powerfull than file_rec because it uses a custom algorythm that does not nee to perform a full recursive search before tuning it to only find the directories with a good value of depth. Depth example: if i have dir/dir2/dir3, dir/dir2b/dir3b, i have a depth equal to 3
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>fold_rec2(xmax, xmin = 1, pathc = ".")
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="xmax">xmax</code></td>
+<td>
+<p>is the depth value</p>
+</td></tr>
+<tr><td><code id="xmin">xmin</code></td>
+<td>
+<p>is the minimum value of depth</p>
+</td></tr>
+<tr><td><code id="pathc">pathc</code></td>
+<td>
+<p>is the reference path, from which depth value is equal to 1</p>
+</td></tr>
+</table>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: fold_rec</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>fold_rec</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>fold_rec</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get all the files recursively from a path according to an end and start depth value. If you want to have an other version of this function that uses a more sophisticated algorythm (which can be faster), check file_rec2. Depth example: if i have dir/dir2/dir3, dir/dir2b/dir3b, i have a depth equal to 3
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>fold_rec(xmax, xmin = 1, pathc = ".")
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="xmax">xmax</code></td>
+<td>
+<p>is the end depth value</p>
+</td></tr>
+<tr><td><code id="xmin">xmin</code></td>
+<td>
+<p>is the start depth value</p>
+</td></tr>
+<tr><td><code id="pathc">pathc</code></td>
+<td>
+<p>is the reference path</p>
+</td></tr>
+</table>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: get_rec</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>get_rec</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>get_rec</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get the value of directorie depth from a path.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>get_rec(pathc = ".")
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="pathc">pathc</code></td>
+<td>
+<p>is the reference path
+example: if i have dir/dir2/dir3, dir/dir2b/dir3b, i have a depth equal to 3</p>
+</td></tr>
+</table>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: list_files</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>list_files</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>list_files</h2>
+
+<h3>Description</h3>
+
+<p>A list.files() based function addressing the need of listing the files with extension a or or extension b ...
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>list_files(patternc, pathc = ".")
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="patternc">patternc</code></td>
+<td>
+<p>is a vector containing all the exensions you want</p>
+</td></tr>
+<tr><td><code id="pathc">pathc</code></td>
+<td>
+<p>is the path, can be a vector of multiple path because list.files() supports it.</p>
+</td></tr>
+</table>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: see_file</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>see_file</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>see_file</h2>
+
+<h3>Description</h3>
+
+<p>Allow to get the filename or its extension
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>see_file(string_, index_ext = 1, ext = TRUE)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="string_">string_</code></td>
+<td>
+<p>is the input string</p>
+</td></tr>
+<tr><td><code id="index_ext">index_ext</code></td>
+<td>
+<p>is the occurence of the dot that separates the filename and its extension</p>
+</td></tr>
+<tr><td><code id="ext">ext</code></td>
+<td>
+<p>is a boolean that if set to TRUE, will return the file extension and if set to FALSE, will return filename</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>
+print(see_file(string_="file.abc.xyz"))
+
+#[1] ".abc.xyz"
+
+print(see_file(string_="file.abc.xyz", ext=FALSE))
+
+#[1] "file"
+
+print(see_file(string_="file.abc.xyz", index_ext=2))
+
+#[1] ".xyz"
+
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
+<!DOCTYPE html><html><head><title>R: see_inside</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>see_inside</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>see_inside</h2>
+
+<h3>Description</h3>
+
+<p>Return a list containing all the column of the files in the current directory with a chosen file extension and its associated file and sheet if xlsx. For example if i have 2 files &quot;out.csv&quot; with 2 columns and &quot;out.xlsx&quot; with 1 column for its first sheet and 2 for its second one, the return will look like this: c(column_1, column_2, column_3, column_4, column_5, unique_separator, &quot;1-2-out.csv&quot;, &quot;3-3-sheet_1-out.xlsx&quot;, 4-5-sheet_2-out.xlsx)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>see_inside(
+  pattern_,
+  path_ = ".",
+  sep_ = c(","),
+  unique_sep = "#####",
+  rec = FALSE
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="pattern_">pattern_</code></td>
+<td>
+<p>is a vector containin the file extension of the spreadsheets (&quot;xlsx&quot;, &quot;csv&quot;...)</p>
+</td></tr>
+<tr><td><code id="path_">path_</code></td>
+<td>
+<p>is the path where are located the files</p>
+</td></tr>
+<tr><td><code id="sep_">sep_</code></td>
+<td>
+<p>is a vector containing the separator for each csv type file in order following the operating system file order, if the vector does not match the number of the csv files found, it will assume the separator for the rest of the files is the same as the last csv file found. It means that if you know the separator is the same for all the csv type files, you just have to put the separator once in the vector.</p>
+</td></tr>
+<tr><td><code id="unique_sep">unique_sep</code></td>
+<td>
+<p>is a pattern that you know will never be in your input files</p>
+</td></tr>
+<tr><td><code id="rec">rec</code></td>
+<td>
+<p>is a boolean allows to get files recursively if set to TRUE, defaults to TRUE
+If x is the return value, to see all the files name, position of the columns and possible sheet name associanted with, do the following:</p>
+</td></tr>
+</table>
+
+</main>
+
+</div>
+</body></html>
